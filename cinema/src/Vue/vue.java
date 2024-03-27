@@ -29,7 +29,7 @@ public class vue extends JFrame {
         JButton fermer = new JButton();
         //Redimensionner les images
         try {
-            Image image = ImageIO.read(new File("C:\\Users\\david\\java\\projet_S6\\Cinema\\cinema\\fermer.jpeg"));
+            Image image = ImageIO.read(new File("C:\\Users\\david\\java\\projet_S6\\Cinema\\cinema\\fermer.jpeg")); //attention mettre le chemin sur votre pc
             Image resizedImage = image.getScaledInstance(70, 70, Image.SCALE_SMOOTH); // Redimensionner l'image
             ImageIcon icon = new ImageIcon(resizedImage); // Utiliser l'image redimensionnée pour créer l'icône
             fermer.setIcon(icon); // Définir l'icône du bouton
