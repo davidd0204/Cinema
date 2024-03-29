@@ -1,5 +1,5 @@
 package Vue;
-
+import Controlleur.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,6 +11,8 @@ public class vue extends JFrame {
     private JTextField screen;
 
     public vue() {
+        Login connexion = new Login();
+        connexion.setVisible(true);
         setTitle("Cinema ECE");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
