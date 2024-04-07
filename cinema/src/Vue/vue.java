@@ -26,7 +26,7 @@ public class vue extends JFrame {
 
     }
     private void initialize_buttons(JPanel buttonPanel){
-        JButton fermer = new JButton();
+        /*JButton fermer = new JButton();
         //Redimensionner les images
         try {
             Image image = ImageIO.read(new File("C:\\Users\\david\\java\\projet_S6\\Cinema\\cinema\\fermer.jpeg"));
@@ -53,6 +53,6 @@ public class vue extends JFrame {
 
         add(buttonPanel, BorderLayout.WEST); // Ajouter le panneau de boutons à gauche de la fenêtre
 
-        pack();
+        pack();*/
     }
 }
