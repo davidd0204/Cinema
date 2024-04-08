@@ -1,4 +1,4 @@
-import Vue.vue;
+import Vue.*;
 import Modele.*;
 import javax.swing.*;
 import java.sql.*;
@@ -26,10 +26,12 @@ public class Main {
             e.printStackTrace();
         }
 
-        SwingUtilities.invokeLater(() -> {
-            vue vue = new vue();
-            vue.setVisible(true);
-        });
+        ///SwingUtilities.invokeLater(() -> {
+         //   vue vue = new vue();
+          //  vue.setVisible(true);
+     ///   });
+        new Acceuil();
+
 
     }
 }
