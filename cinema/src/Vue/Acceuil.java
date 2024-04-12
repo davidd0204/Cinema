@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 public class Acceuil {
     private JFrame fenetre;
     private JLabel texteLabel;
-    public Acceuil(){
+    public Acceuil(String nomfilm){
         fenetre = new JFrame("Exemple avec deux boutons");
         texteLabel = new JLabel("Message initial");
 
@@ -26,7 +26,7 @@ public class Acceuil {
 
         page.ajouterBouton(fenetre,texteLabel);
         page.ajouterImage(texteLabel,"bonjour");
-        page.afficherImageURL("/fermer.jpeg",870,400);
+        page.afficherImageURL(nomfilm,870,400);
 
     }
 }

@@ -32,6 +32,28 @@ public class Connexion {
         // Création d'une Statement pour exécuter d'autres requêtes si nécessaire
         stmt = conn.createStatement();
     }
+    public String getFilmName() throws SQLException {
+        String filmName = "";
+        String sqlSelect = "SELECT image_film FROM film WHERE id_film = ?";
+
+        // Utilisation d'un PreparedStatement pour éviter les problèmes de sécurité liés aux injections SQL
+        PreparedStatement psSelect = conn.prepareStatement(sqlSelect);
+        psSelect.setInt(1, 57); // Lier le paramètre à la valeur 57
+
+        // Exécution de la requête et récupération du résultat
+        ResultSet rs = psSelect.executeQuery();
+        if (rs.next()) {
+            System.out.println("cokfd");
+            filmName = rs.getString("image_film");
+        }
+
+        // Fermeture des ressources
+        rs.close();
+        psSelect.close();
+
+        return filmName;
+    }
+
 
     // Méthode pour fermer les ressources et éviter les fuites de mémoire
     public void close() throws SQLException {
