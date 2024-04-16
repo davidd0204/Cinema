@@ -4,14 +4,36 @@ import Controlleur.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.SQLException;
 
 public class Login extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
+    private boolean login_state; //true si il a réussi à se connecter, false sinon (pour passer à l'onglet suivant
 
-    public Login() {
-        Modele.UserDAO userDAO = new Modele.UserDAOImpl();
-        LoginControlleur loginControlleur = new LoginControlleur(userDAO);
+    public Login() throws SQLException {
+        Modele.UserDAO userDAO=null;
+        LoginControlleur loginControlleur = null;
+        try{
+            userDAO = new Modele.UserDAOImpl();
+            loginControlleur = new LoginControlleur(userDAO);
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        finally{
+            if(userDAO!=null)
+            {
+                try{
+                    userDAO.close();
+                }
+                catch(SQLException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
         setTitle("Login");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,18 +49,23 @@ public class Login extends JFrame {
         JButton loginButton = new JButton("Se connecter");
         JLabel createAccountLabel = new JLabel("Vous n'avez pas de compte ? Créer un compte");
 
-        // Ajout d'un écouteur pour le bouton de connexion
+        // Ajout d'un listener pour le bouton de connexion
+        LoginControlleur finalLoginControlleur = loginControlleur;
         loginButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String username = usernameField.getText();
                 char[] passwordChars = passwordField.getPassword();
                 String password = new String(passwordChars); // Convertir le tableau de caractères en String
                 // Vérifier les informations de connexion (à implémenter)
-                if (loginControlleur.authenticate(username, password)) {
+                System.out.println("utilisateur : "+username);
+                System.out.println("mdp : "+password);
+                if (finalLoginControlleur.authenticate(username, password)) {
                     JOptionPane.showMessageDialog(null, "Connexion réussie");
                     // Ici vous pouvez ouvrir une nouvelle fenêtre ou effectuer d'autres actions
+                    login_state=true;
                 } else {
                     JOptionPane.showMessageDialog(null, "Nom d'utilisateur ou mot de passe incorrect");
+                    login_state=false;
                 }
             }
         });
@@ -61,6 +88,11 @@ public class Login extends JFrame {
         add(panel);
 
         setVisible(true);
+    }
+
+    public boolean getLoginState()
+    {
+        return login_state;
     }
 
 

@@ -5,12 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.sql.SQLException;
 import javax.imageio.ImageIO;
 
 public class vue extends JFrame {
     private JTextField screen;
 
-    public vue() {
+    public vue() throws SQLException {
         Login connexion = new Login();
         connexion.setVisible(true);
         setTitle("Cinema ECE");

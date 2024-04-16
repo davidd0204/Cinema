@@ -10,7 +10,7 @@ public class UserDAOImpl implements UserDAO {
     public UserDAOImpl() throws SQLException {
         try {
             // Charger le driver JDBC
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Établir la connexion à votre base de données
             String url = "jdbc:mysql://localhost:3306/cinema";
@@ -43,5 +43,11 @@ public class UserDAOImpl implements UserDAO {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    public void close() throws SQLException {
+        if (connection != null) {
+            connection.close();
+        }
     }
 }
