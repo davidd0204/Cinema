@@ -1,14 +1,15 @@
 package Modele;
 
 import java.sql.*;
-import java.util.Optional;
+import java.util.*;
 
 public class UserDAOImpl implements UserDAO {
     private Connection connection;
 
     // Constructeur, initialisation de la connexion
+
     public UserDAOImpl() throws SQLException {
-        try {
+        /*try {
             // Charger le driver JDBC
             Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -21,7 +22,7 @@ public class UserDAOImpl implements UserDAO {
             e.printStackTrace();
             // Lancer une exception SQLException pour indiquer que la connexion à la base de données a échoué
             throw new SQLException("Connexion à la base de données impossible", e);
-        }
+        }*/
     }
     @Override
     public Optional<User> getUserByUsername(String username) {
@@ -49,5 +50,11 @@ public class UserDAOImpl implements UserDAO {
         if (connection != null) {
             connection.close();
         }
+    }
+
+    public void connect(String URLDataBase, String LoginDataBase, String PwdDataBase) throws SQLException, ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+        String urlDatabase = "jdbc:mysql://localhost:3306/cinema";
+        connection = DriverManager.getConnection(URLDataBase, LoginDataBase, PwdDataBase);
     }
 }

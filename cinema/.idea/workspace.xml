@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2795d4ba-25d0-45ef-842c-366ba1159f58" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modele/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modele/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue/vue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vue/vue.java" afterDir="false" />
-    </list>
+    <list default="true" id="2795d4ba-25d0-45ef-842c-366ba1159f58" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +68,7 @@
       <workItem from="1711458568646" duration="52000" />
       <workItem from="1711458742267" duration="5983000" />
       <workItem from="1711724224075" duration="4188000" />
-      <workItem from="1713257986147" duration="2895000" />
+      <workItem from="1713257986147" duration="3493000" />
     </task>
     <servers />
   </component>
