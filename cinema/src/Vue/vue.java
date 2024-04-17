@@ -22,7 +22,7 @@ public class vue extends JFrame {
         add(screen, BorderLayout.NORTH);
 
         JPanel buttonPanel = new JPanel(new BorderLayout()); // Utiliser un BorderLayout pour le panneau de boutons
-        initialize_buttons(buttonPanel);
+        //initialize_buttons(buttonPanel);
 
     }
     private void initialize_buttons(JPanel buttonPanel){
