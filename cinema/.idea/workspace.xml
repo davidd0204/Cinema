@@ -37,7 +37,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "david1",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/david/java/projet_S6/Cinema/cinema",
+    "last_opened_file_path": "C:/Users/david/java/TP6/Exercice1&2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +47,12 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -68,7 +74,7 @@
       <workItem from="1711458568646" duration="52000" />
       <workItem from="1711458742267" duration="5983000" />
       <workItem from="1711724224075" duration="4188000" />
-      <workItem from="1713257986147" duration="3493000" />
+      <workItem from="1713257986147" duration="8647000" />
     </task>
     <servers />
   </component>
